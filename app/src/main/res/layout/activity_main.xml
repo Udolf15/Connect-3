@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.asifhashmi.connect3.MainActivity">
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="360dp"
+        android:rowCount="3"
+        android:columnCount="3"
+        android:orientation="horizontal"
+        android:id="@+id/table"
+        android:background="@drawable/board"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
+
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:id="@+id/imageView"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_margin="10dp"
+            android:onClick="dropDown"
+            android:tag="1"/>
+
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:id="@+id/imageView1"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:layout_marginLeft="28dp"
+            android:layout_marginTop="10dp"
+            android:onClick="dropDown"
+            android:tag="2"/>
+
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:id="@+id/imageView2"
+            android:layout_row="0"
+            android:layout_column="2"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="28dp"
+            android:onClick="dropDown"
+            android:tag="3"/>
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:id="@+id/imageView3"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:onClick="dropDown"
+            android:tag="4"/>
+
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:id="@+id/imageView4"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="28dp"
+            android:onClick="dropDown"
+            android:tag="5"/>
+
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:id="@+id/imageView5"
+            android:layout_row="1"
+            android:layout_column="2"
+            android:layout_marginLeft="28dp"
+            android:layout_marginTop="25dp"
+            android:onClick="dropDown"
+            android:tag="6"/>
+
+
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:id="@+id/imageVie6"
+            android:layout_row="2"
+            android:layout_column="0"
+            android:layout_marginTop="34dp"
+            android:layout_marginLeft="10dp"
+            android:onClick="dropDown"
+            android:tag="7"/>
+
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:id="@+id/imageView7"
+            android:layout_row="2"
+            android:layout_column="1"
+            android:layout_marginLeft="28dp"
+            android:layout_marginTop="35dp"
+            android:onClick="dropDown"
+            android:tag="8"/>
+
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:id="@+id/imageView8"
+            android:layout_row="2"
+            android:layout_column="2"
+            android:layout_marginLeft="28dp"
+            android:layout_marginTop="34dp"
+            android:onClick="dropDown"
+            android:tag="9"/>
+
+    </GridLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:padding="20dp"
+        android:background="#b3f9f8"
+        android:visibility="invisible"
+        android:id="@+id/linearL">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:id="@+id/textView"
+            android:layout_gravity="center_horizontal"
+            android:textSize="30dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Play Again"
+            android:id="@+id/button"
+            android:layout_gravity="center_horizontal"
+            android:textSize="30dp"
+            android:onClick="newGame" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/linearLayout"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Player1"
+            android:id="@+id/player1NameSeen"
+            android:textSize="25dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:paddingLeft="10dp"
+            android:paddingBottom="5dp"
+            android:textColor="#f9e027" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Player2"
+            android:id="@+id/player2NameSeen"
+            android:padding="10dp"
+            android:textSize="25dp"
+            android:layout_below="@+id/player1Score"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_gravity="left"
+            android:paddingTop="14dp"
+            android:textColor="#f22c61" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:id="@+id/player1Score"
+            android:textSize="25dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignRight="@+id/table"
+            android:layout_alignEnd="@+id/table"
+            android:padding="5dp"
+            android:paddingTop="0dp"
+            android:textColor="#f9e027" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:id="@+id/player2Score"
+            android:textSize="25dp"
+            android:layout_below="@+id/player1Score"
+            android:layout_alignRight="@+id/table"
+            android:layout_alignEnd="@+id/table"
+            android:padding="5dp"
+            android:textColor="#f22c61" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:id="@+id/frameLayout">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Play Game"
+            android:id="@+id/playG"
+            android:layout_gravity="center_horizontal|bottom"
+            android:textSize="25dp"
+            android:background="#000000"
+            android:textColor="#FFFFFF"
+            android:padding="15dp"
+            android:onClick="playGameMain" />
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Connect 3"
+        android:id="@+id/title"
+        android:layout_gravity="center_horizontal|top"
+        android:textColor="#332c92"
+        android:textSize="60dp"
+        android:gravity="center_horizontal" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/player1Name"
+        android:layout_alignBottom="@+id/table"
+        android:layout_marginBottom="230dp"
+        android:hint="Enter the name of player 1"
+        android:textColor="#f9e027"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/table"
+        android:layout_alignEnd="@+id/table"
+        android:textSize="25dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/player2Name"
+        android:layout_alignBottom="@+id/table"
+        android:layout_marginBottom="150dp"
+        android:hint="Enter the name of player 2"
+        android:textColor="#f22c61"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/table"
+        android:layout_alignEnd="@+id/table"
+        android:textSize="25dp" />
+
+
+</RelativeLayout>
